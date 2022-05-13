@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>back-to-top</title>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<style>
+
+*{
+	margin:0;
+	padding:0;
+}
+
+.back-to-top {
+    bottom: 10px;
+    cursor: pointer;
+    display: none;
+    height: 36px;
+    position: fixed;
+    right: 10px;
+    width: 38px;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 15%), 0 1px 1px rgb(0 0 0 / 8%);
+}
+
+.btn {
+    border: 1px solid transparent;
+}
+
+</style>
+</head>
+<body>
+
+
+
+<div style="width:100%; height:400px; background:red"></div>
+<div style="width:100%; height:400px; background:#5AA15D"></div>
+<div style="width:100%; height:400px; background:#22031C"></div>
+<div style="width:100%; height:400px; background:#EB5534"></div>
+<div style="width:100%; height:400px; background:#753AB3"></div>
+<div style="width:100%; height:400px; background:#BF0405"></div>
+
+<button role="button" id="back-to-top" title="Click to return on the top page"
+ data-toggle="tooltip" data-placement="left" class="btn btn-success back-to-top"
+  style="">
+  <i aria-hidden="true" class="fa fa-angle-double-up"></i>
+</button>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(window).on("scroll",(function(){
+	$(this).scrollTop()>80?
+	$("#back-to-top").fadeIn():
+	$("#back-to-top").fadeOut()}));
+
+    $("#back-to-top").click((function(){
+	return $("body,html").animate({scrollTop:0},800);
+	}));
+	
+</script>
+</body>
+</html>
