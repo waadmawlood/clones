@@ -8,7 +8,7 @@ let randon_captcha = float2int((Math.random() * 25) + 1) ;
 const form = window.document.getElementsByClassName("captcha-mini")[0].addEventListener("submit", submitForm);
 let inputDiv = document.querySelectorAll(".captcha-input")[0]; //= "<img src="+"images/c13.jpg"+" alt="+"captcha+"+" width="+"90px"+"><br><input type="+"text"+" placeholder="+"code..."+" style="+"margin-top: 2px;"+">";
 let valueCaptcha = mapCode(randon_captcha);
-inputDiv.innerHTML = "<img src='images/c"+ randon_captcha +".jpg' alt='captcha' width='90px'><br><input type='text' id='c"+ randon_captcha +"' placeholder='code...' style='margin-top: 2px;'><small id='msgCaptcha' style='color:red; font-size:12px; display:none'>Please input code in image...</small>";
+inputDiv.innerHTML = "<img src='https://captcha-mini.netlify.app/images/c"+ randon_captcha +".jpg' alt='captcha' width='90px'><br><input type='text' id='c"+ randon_captcha +"' class='form-control' placeholder='code...' style='margin-top: 2px;'><small id='msgCaptcha' style='color:red; font-size:12px; display:none'>Please input code in image...</small>";
 function submitForm(event){
     let inputCaptcha = window.document.getElementById("c" + randon_captcha);
     if(inputCaptcha.value != valueCaptcha){ event.preventDefault(); window.document.getElementById("msgCaptcha").style.display = "block"; }}
