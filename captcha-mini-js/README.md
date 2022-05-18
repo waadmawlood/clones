@@ -39,7 +39,7 @@ just use this library
 - easy
 - supported HTML5 - PHP - React.js - Vue.js
 - The Developer just use in ( chrome , firefox , Edge , safari) browser
-- [Waad](https://https://waad.netlify.app/) - Portfilio
+- [Waad](https://waad.netlify.app/) - Portfilio
 
 ## Installation
 ```js
